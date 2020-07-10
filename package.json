@@ -1,0 +1,80 @@
+{
+  "name": "sudoku",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "lodash": "^4.17.11",
+    "normalize.css": "^8.0.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "autoprefixer": "^9.5.1",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.8.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-jest": "^22.5.1",
+    "eslint-plugin-react": "^7.13.0",
+    "@types/lodash": "^4.14.126",
+    "@types/react": "^16.8.17",
+    "@types/react-dom": "^16.8.4",
+    "@types/react-router-dom": "^4.3.3",
+    "postcss-modules": "^1.4.1",
+    "prop-types": "^15.7.2",
+    "sass": "^1.20.1",
+    "typescript": "^3.4.5",
+    "@types/jest": "^24.0.11",
+    "@types/node": "^11.13.6",
+    "concurrently": "^4.1.0",
+    "husky": "^1.3.1",
+    "jest": "^24.7.1",
+    "jest-dom": "^3.1.3",
+    "jest-extended": "^0.11.1",
+    "parcel-bundler": "^1.12.3",
+    "prettier": "^1.17.0",
+    "react-test-renderer": "^16.8.6",
+    "react-testing-library": "^6.1.2",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.16.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-react": "^4.0.0"
+  },
+  "scripts": {
+    "dev": "node parcel.config.js",
+    "clear": "rm -R dist && rm -R .cache",
+    "build": "node parcel.config.js PROD",
+    "test": "jest --coverage",
+    "test:watch": "jest --watchAll --coverage"
+  },
+  "alias": {
+    "sudokuApp": "./src/"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "globals": {
+      "ts-jest": {
+        "diagnostics": false
+      }
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "moduleNameMapper": {
+      ".+\\.scss$": "<rootDir>/src/styleMock.ts",
+      "^sudokuApp(.*)$": "<rootDir>/src$1"
+    },
+    "testMatch": [
+      "**/*.(test|spec).(ts|tsx|js)"
+    ]
+  },
+  "author": "Alexander Pugh",
+  "license": "ISC"
+}
